@@ -17,7 +17,7 @@ func handlerFafa(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", handlerFafa)
-  //http.HandleFunc("/", handler) //tell the http package to handle all requests to the webroot with handler
+	http.HandleFunc("/fafa/", handlerFafa) //must last "/"
+  http.HandleFunc("/", handler) //tell the http package to handle all requests to the webroot with handler
   log.Fatal(http.ListenAndServe(":8080", nil))
 }
